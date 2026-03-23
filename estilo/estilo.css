@@ -1,0 +1,136 @@
+body{
+    background-color: #335787;
+    color: #ffffff;
+    margin: 0;
+}
+.menu{
+    border: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(150, 150, 150);
+    height: 170px;
+}
+.navegacao{
+    padding-right: 30px;
+}
+#logo{
+    width: 15%;
+    padding-left: 1%;
+
+}
+header a{
+    text-decoration: none;
+    font-size: 35px;
+    padding-right: 30px;
+}
+
+header a:hover{
+    color: #ff0000;
+}
+
+#titulo{
+    text-align: center;
+}
+
+#apresentacao{
+    width: 70%;
+}
+
+.inicio{
+    font-size: 160%;
+}
+
+.texto{
+    display: block;
+    font-size: 100%;
+}
+
+.servicos{
+    margin-left: 28%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(150, 150, 150);
+    padding: 15px;
+    width: 40%;
+}
+.servicos ul{
+    list-style: disc;
+    font-size: 160%;
+}
+.form{
+    display: flex;
+    font-size: 20px;
+    padding: 0 10px 0 25px;
+}
+.cor-form{
+    padding: 0 0 35px 35px;
+    border-radius: 5%;
+    width: 40%;
+}
+
+label{
+    display: block;
+}
+
+input, textarea{
+    display: block;
+    font-size: 100%;
+    margin-bottom: 10px;
+}
+
+.rodape{
+    padding: 0.5%;
+}
+
+footer{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+footer ul{
+    list-style: none;
+}
+
+#copyright{
+    padding-left: 33%;
+}
+
+label{
+    color: #ffffff ;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#quem{
+    width: 35%;
+}
+.sobre{
+    padding-top: 2%;
+    text-align: justify;
+}
+
+.sobre p{
+    font-size: 150%;
+    padding: 0 0 0 5%;
+}
+
+.whatsapp{
+    background-color: whitesmoke;
+    margin-top: 2%;
+    margin-right: 27%;
+    margin-left: 22%;
+    border-radius: 5%;
+    display: flex;
+    gap: 5px;
+    color: #189d0e;
+}
+#wpp{
+    width: 20%;
+    padding-left: 9%;
+}

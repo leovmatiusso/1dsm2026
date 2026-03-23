@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo/estilo.css">
+    <title>Auto Escola</title>
+</head>
+<body>
+    <header class="menu">
+        <img src="../img/logo.png" alt="logo" id="logo">
+        <nav class="navegacao">
+            <a href="index.html">Home</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+    <h1 style="padding-left: 10%;">Preencha o nosso Formulário:</h1>
+    <div class="container">
+        <section class="form">
+                <form action="/paginas/contato.html" target="_self" class="cor-form">
+                <input type="text" id="name" size="50" required placeholder="Digite seu nome completo...">
+                <input type="tel" id="tel" size="50" required placeholder="Digite seu telefone...">
+                <input type="email" id="email" size="50" required placeholder="Digite seu email...">
+                <label for="mensagem">Mensagem:</label>
+                <textarea rows="15" cols="48" id="mensagem" required></textarea>
+                <input type="submit" value="Enviar">    
+            </form>
+        </section>
+        <section style="padding-left: 1%;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.219195489632!2d-45.797874424903796!3d-23.162198679076074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4c498567cf5d%3A0xf9cf22ea7d377dca!2sFATEC%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20Prof.%20Jessen%20Vidal!5e0!3m2!1spt-BR!2sbr!4v1774132156823!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <br>
+            <div class="whatsapp">
+                <img src="../img/wpp.png" alt="wpp" id="wpp"> <h1>(12) 3905-4699</h1>
+            </div>
+        </section>    
+    </div>
+    <br>
+    <hr>
+    <footer class="rodape">
+        <ul>
+            <li><strong>ENDEREÇO: </strong>Avenida Cesare Monsueto Giulio Lattes, 1350 Distrito - Eugênio de Melo, São José dos Campos - SP, 12247-014</li>
+            <li><strong>TELEFONE: </strong> +55 (12) 3905-4699</li>
+            <li><strong>EMAIL: </strong>direcaocerta@autoescola.com.br</li>
+            <br>
+            <li id="copyright">&copy; 2025 Auto Escola Direção Certa. Todos os direitos reservados.</li>
+        </ul>
+    </footer>
+</body>
+</html>
