@@ -1,3 +1,13 @@
+#logo{
+    width: 10%
+}
+
+body{
+    background-color: #335787;
+    color: #ffffff;
+
+}
+/*
 body{
     background-color: #335787;
     color: #ffffff;
@@ -62,7 +72,7 @@ header a:hover{
 .form{
     display: flex;
     font-size: 20px;
-    padding: 0 10px 0 25px;
+    padding: 0 0 0 25px;
 }
 .cor-form{
     padding: 0 0 35px 35px;
@@ -123,8 +133,8 @@ label{
 .whatsapp{
     background-color: whitesmoke;
     margin-top: 2%;
-    margin-right: 27%;
-    margin-left: 22%;
+    margin-right: 35%;
+    margin-left: 15%;
     border-radius: 5%;
     display: flex;
     gap: 5px;
