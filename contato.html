@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="estilo/estilo.css">
-    <title>Auto Escola - Contato</title>
+    <title>Auto Escola - Sobre</title>
 </head>
+
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -39,9 +41,9 @@
             </div>
         </nav>
     </header>
-    <main class="container-fluid mt-4">
+    <main class="container-fluid">
         <section class="row">
-            <div class="col-6">
+            <div class="col-12 col-md-6 mt-4 px-4">
                 <h1>Preencha o nosso Formulário: </h1>
                 <form action="#" id="form-contato" class="mb-3 mt-3">
                     <label for="nome" class="form-label">Nome: </label>
@@ -53,7 +55,7 @@
                     <label for="texto" class="form-label">Mensagem: </label>
                     <textarea class="form-control" rows="5" id="texto" name="texto"></textarea>
                 </form>
-                <div class="d-flex">
+                <div class="d-flex mb-5">
                     <button type="submit" form="form-contato" class="btn btn-light">Enviar</button>
                     <button type="button" class="btn btn-success ms-auto">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="currentColor"
@@ -66,14 +68,38 @@
                     </button>
                 </div>
             </div>
-            <div class="col-6 text-center">
+            <div class="col-12 col-md-6 mt-5 text-center px-4">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.219195489632!2d-45.797874424903796!3d-23.162198679076074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4c498567cf5d%3A0xf9cf22ea7d377dca!2sFATEC%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20Prof.%20Jessen%20Vidal!5e0!3m2!1spt-BR!2sbr!4v1774132156823!5m2!1spt-BR!2sbr"
-                    width="600" height="438" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="100%" height="417" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
         </section>
     </main>
+    <footer class="py-5 container">
+        <section class="row">
+            <div class="col-md-6">
+                <address>
+                    <ul class="flex-column">
+                        <li><strong>ENDEREÇO: </strong>Avenida Cesare Monsueto Giulio Lattes, 1350 Distrito
+                            - Eugênio de Melo, São José dos Campos - SP, 12247-014</li>
+                        <li><strong>TELEFONE: </strong> +55 (12) 3905-4699</li>
+                        <li><strong>EMAIL: </strong>direcaocerta@autoescola.com.br</li>
+                    </ul>
+                </address>
+            </div>
+            <div class="col-md-2 offset-md-3">
+                <nav class="nav">
+                    <ul class="flex-column">
+                        <li class="nav-link"><a href="index.html" class="text-white">HOME</a></li>
+                        <li class="nav-link"><a href="sobre.html" class="text-white">SOBRE NÓS</a></li>
+                        <li class="nav-link"><a href="contato.html" class="text-white">CONTATO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </footer>
 </body>
+
 </html>

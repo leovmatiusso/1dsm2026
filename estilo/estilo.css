@@ -3,9 +3,13 @@
 }
 
 body{
-    background-color: #335787;
+    background-color: black;
     color: #ffffff;
 
+}
+
+main{
+    background-color: #335787;
 }
 /*
 body{
