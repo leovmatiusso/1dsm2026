@@ -1,0 +1,125 @@
+#logo {
+    width: 15%;
+}
+
+@media (min-width: 576px) {
+    #logo {
+        width: 6%
+    }
+}
+
+body {
+    padding-top: 55px;
+    background-color: #0d2035;
+    overflow-x: hidden;
+    width: 100%;
+    color: #a8c0d6;
+}
+
+@media (min-width: 576px) {
+    body {
+        padding-top: 75px;
+    }
+}
+
+nav {
+    color: #1a3a5c;
+    background-color: #ffffff;
+}
+
+@media (min-width: 576px) {
+    #navegacao {
+        margin-left: 29%;
+    }
+}
+
+header a {
+    color: #1a3a5c !important;
+}
+
+a:hover {
+    color: #F5A623 !important;
+}
+
+.active {
+    color: #F5A623 !important;
+    text-decoration: underline !important;
+}
+
+main {
+    background-color: #1E3A5F;
+    font-family: arial, sans-serif;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+i {
+    color: #F5A623;
+}
+
+#carousel img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 576px) {
+    #carousel img {
+        max-width: 800px;
+    }
+}
+
+#hab {
+    width: 5%;
+}
+
+@media (min-width: 576px) {
+    #hab {
+        width: 8%;
+    }
+}
+
+
+.servicos {
+    margin-left: 25%;
+    background-color: #F59E0B;
+    padding: 20px;
+    width: 50%;
+}
+
+.servicos ul {
+    list-style: disc;
+    font-size: 130%;
+}
+
+footer strong {
+    color: #F5A623;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: #a8c0d6;
+}
+
+#form-contato label {
+    font-family: 'Times New Roman', Times, serif;
+}
+#form-contato input{
+    background-color: #122741;
+    color: #a8c0d6;
+}
+
+#enviar {
+    background-color: #122741;
+    color: #a8c0d6;
+}
