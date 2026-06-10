@@ -1,8 +1,8 @@
 from flask import Flask, request, redirect, render_template
 import mysql.connector
-
-app = Flask(__name__)
-
+ 
+app = Flask(__name__, static_folder='static', template_folder='templates')
+ 
 def get_conn():
     return mysql.connector.connect(
         host="localhost",
@@ -10,10 +10,27 @@ def get_conn():
         password="leovm",
         database="db_direcao"
     )
-
+ 
+ 
+@app.route('/')
+def index():
+    return render_template('index.html')
+ 
+@app.route('/painel')
+def painel():
+    conn   = get_conn()
+    cursor = conn.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM preCadastro ORDER BY id DESC")
+    cadastros = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return render_template('painel.html', cadastros=cadastros)
+ 
 @app.route('/contato')
 def contato():
-    return render_template('contato.html')
+    enviado = request.args.get('enviado', 0)
+    return render_template('contato.html', enviado=enviado)
+ 
 
 @app.route('/salvar', methods=['POST'])
 def salvar():
@@ -21,19 +38,24 @@ def salvar():
     cpf      = request.form['cpf']
     email    = request.form['email']
     telefone = request.form['telefone']
-    servico = request.form['servico']
-
-    conn   = get_conn()
-    cursor = conn.cursor()
-    cursor.execute(
-        "INSERT INTO preCadastro (nome, cpf, email, telefone, servico_desejado) VALUES (%s, %s, %s, %s, %s)",
-        (nome, cpf, email, telefone, servico)
-    )
-    conn.commit()
-    cursor.close()
-    conn.close()
-
+    servico  = request.form['servico']
+ 
+    try:
+        conn   = get_conn()
+        cursor = conn.cursor()
+        cursor.execute(
+            """INSERT INTO preCadastro (nome, cpf, email, telefone, servico_desejado)
+               VALUES (%s, %s, %s, %s, %s)""",
+            (nome, cpf, email, telefone, servico)
+        )
+        conn.commit()
+    except mysql.connector.IntegrityError:
+        return redirect('/contato?erro=cpf_duplicado')
+    finally:
+        cursor.close()
+        conn.close()
+ 
     return redirect('/contato?enviado=1')
-
+ 
 if __name__ == '__main__':
     app.run(debug=True)

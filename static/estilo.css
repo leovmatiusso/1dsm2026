@@ -1,7 +1,6 @@
 #logo {
     width: 15%;
 }
-
 @media (min-width: 576px) {
     #logo {
         width: 6%
@@ -9,46 +8,38 @@
 }
 
 body {
-    padding-top: 55px;
-    background-color: #0d2035;
+    background-color: #1E3A5F;
     overflow-x: hidden;
     width: 100%;
     color: #a8c0d6;
-}
-
-@media (min-width: 576px) {
-    body {
-        padding-top: 75px;
-    }
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
     color: #1a3a5c;
     background-color: #ffffff;
 }
-
 @media (min-width: 576px) {
     #navegacao {
         margin-left: 29%;
     }
 }
-
 header a {
     color: #1a3a5c !important;
 }
-
 a:hover {
     color: #F5A623 !important;
 }
-
 .active {
     color: #F5A623 !important;
     text-decoration: underline !important;
 }
 
 main {
-    background-color: #1E3A5F;
     font-family: arial, sans-serif;
+    flex: 1;
 }
 
 h1 {
@@ -98,6 +89,9 @@ i {
     font-size: 130%;
 }
 
+footer{
+    background-color: #0d2035;
+}
 footer strong {
     color: #F5A623;
 }
@@ -118,8 +112,11 @@ footer a {
     background-color: #122741;
     color: #a8c0d6;
 }
-
 #enviar {
     background-color: #122741;
     color: #a8c0d6;
+}
+input::placeholder {
+    color: #d0dce87e !important;
+    opacity: 1 !important;
 }
