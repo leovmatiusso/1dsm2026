@@ -1,0 +1,20 @@
+# Ambiente virtual
+venv/
+.venv/
+ 
+# Variáveis de ambiente (NUNCA suba o .env real)
+.env
+ 
+# Python
+__pycache__/
+*.pyc
+ 
+# Docker
+*.log
+ 
+# VSCode
+.vscode/
+ 
+# Sistema
+.DS_Store
+Thumbs.db

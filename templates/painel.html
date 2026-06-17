@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% set active_page = 'painel' %}
+
+{% block title %}Painel de Pré-Cadastros{% endblock %}
+
+{% block content %}
+    <main class="container pt-5 mt-3">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 style="font-family: georgia, serif; color: #F59E0B;">
+                Painel de Pré-Cadastros:
+            </h1>
+            <span class="badge fs-6 pt-1 pt-md-3" style="color: #F59E0B;">
+                {{ cadastros|length }} registro(s)
+            </span>
+        </div>
+
+        {% if cadastros %}
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead style="color: #ffffff;">
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Serviço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in cadastros %}
+                    <tr>
+                        <td>{{ c.id }}</td>
+                        <td>{{ c.nome }}</td>
+                        <td>{{ c.cpf }}</td>
+                        <td>{{ c.email }}</td>
+                        <td>{{ c.telefone }}</td>
+                        <td>
+                            {% if c.servico_desejado == 'primeira_hab' %}
+                            <span class="badge bg-primary">Primeira Habilitação</span>
+                            {% elif c.servico_desejado == 'mudanca_cat' %}
+                            <span class="badge bg-warning text-dark">Mudança de Categoria</span>
+                            {% elif c.servico_desejado == 'renovacao' %}
+                            <span class="badge bg-success">Renovação de CNH</span>
+                            {% elif c.servico_desejado == 'curso_teorico' %}
+                            <span class="badge bg-secondary">Curso Teórico</span>
+                            {% else %}
+                            <span class="badge bg-light text-dark">{{ c.servico_desejado }}</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        {% endif %}
+    </main>
+{% endblock %}
