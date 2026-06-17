@@ -72,7 +72,11 @@ i {
 
 @media (min-width: 576px) {
     #hab {
+<<<<<<< HEAD
         width: 12%;
+=======
+        width: 8%;
+>>>>>>> 41a8ed605d5d18e9ccf918f95f42dbfdeca37a2d
     }
 }
 
